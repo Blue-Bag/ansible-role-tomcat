@@ -1,4 +1,12 @@
 ---
 
+#replace the user var with role specific one
+# replace this with your ansible main_user
+tomcat_user: vagrant
+
 tomcat_admin: 'tomcat'
-tomcat_pwd: 'tomcat'
+tomcat_admin_pwd: 'tomcat'
+
+tomcat_connector_port: '8081'
+
+tomcat_firewall: true
