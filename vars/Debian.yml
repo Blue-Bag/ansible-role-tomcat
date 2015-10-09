@@ -1,0 +1,7 @@
+---
+
+tomcat_packages:
+   - openjdk-7-jre
+   - tomcat6
+   - tomcat6-extras
+   - tomcat6-admin

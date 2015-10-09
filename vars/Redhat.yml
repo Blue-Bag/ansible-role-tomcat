@@ -1,0 +1,7 @@
+---
+
+tomcat_packages:
+   - icedtea-web
+   - tomcat6
+   - tomcat6-webapps
+   - tomcat6-admin-webapps
