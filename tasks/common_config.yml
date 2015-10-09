@@ -32,7 +32,7 @@
 - name: add tomcat iptable rule
   command: /sbin/iptables -I INPUT 1 -p tcp --dport {{ tomcat_connector_port }} -j ACCEPT -m comment --comment "tomcat"
   sudo: true
-  when: iptablesrules.stdout.find("tomcat") == -1
+  when: iptablesrules.stdout.find("tomcat") == -1 and tomcat_firewall
   notify:
    - save iptables
 

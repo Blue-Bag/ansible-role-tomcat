@@ -9,4 +9,6 @@ tomcat_admin_pwd: 'tomcat'
 
 tomcat_connector_port: '8081'
 
+# create iptables rule
+# if the calling play is going to handle this then set to false
 tomcat_firewall: true
