@@ -1,1 +1,4 @@
 ---
+
+tomcat_admin: 'tomcat'
+tomcat_pwd: 'tomcat'
