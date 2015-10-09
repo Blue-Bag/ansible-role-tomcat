@@ -1,6 +1,15 @@
 ---
-- include: debian_tomcat.yml
+
+# Include variables and define needed variables.
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
+
+- include: debian_tomcat_init.yml
   when: ansible_os_family == "Debian"
 
-- include: redhat_tomcat.yml
+- include: redhat_tomcat_init.yml
   when: ansible_os_family == "RedHat"
+
+
+- include: common_config.yml

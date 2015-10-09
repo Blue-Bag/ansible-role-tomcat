@@ -1,0 +1,6 @@
+---
+
+- name: install java and tomcat packages (Debian)
+  apt: pkg={{ item }} state=installed
+  sudo: true
+  with_items: tomcat_packages

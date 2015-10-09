@@ -1,12 +1,4 @@
 ---
-- name: install java and tomcat packages
-  apt: pkg={{ item }} state=installed
-  sudo: true
-  with_items:
-   - openjdk-7-jre
-   - tomcat6
-   - tomcat6-extras
-   - tomcat6-admin
 
 - name: change port of tomcat server
   template:
