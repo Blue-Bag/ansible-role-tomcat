@@ -5,3 +5,7 @@ tomcat_packages:
    - tomcat6
    - tomcat6-webapps
    - tomcat6-admin-webapps
+
+
+tomcat_core_user: tomcat
+tomcat_core_group: tomcat

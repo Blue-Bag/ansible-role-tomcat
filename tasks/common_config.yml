@@ -17,7 +17,12 @@
   sudo: true
 
 - name: copy the tomcat6 users file
-  template: src=tomcat-users.xml.j2 dest=/etc/tomcat6/tomcat-users.xml owner=tomcat group=tomcat mode=0644
+  template:
+    src: tomcat-users.xml.j2
+    dest: /etc/tomcat6/tomcat-users.xml
+    owner: "{{ tomcat_core_user }} "
+    group: "{{ tomcat_core_group }}"
+    mode: 0644
   sudo: true
   notify:
    - restart tomcat6

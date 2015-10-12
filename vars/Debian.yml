@@ -5,3 +5,6 @@ tomcat_packages:
    - tomcat6
    - tomcat6-extras
    - tomcat6-admin
+
+tomcat_core_user: tomcat6
+tomcat_core_group: tomcat6
