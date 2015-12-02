@@ -73,6 +73,11 @@
   with_items: slf4jfiles.stdout_lines
   when: "'android' not in item and 'slf4j-log4j12' not in item and 'log4j-over-slf4j' not in item and 'slf4j-jcl' not in item"
 
+# should these be owned by the tomcat user/group
+- name: ensure slf4j files are readable
+  command: chmod -R o+r /usr/share/tomcat6/lib
+  sudo: true
+
 - name: force restart of tomcat6
   service: name=tomcat6 state=restarted
   sudo: true
