@@ -30,7 +30,7 @@
 - name: get iptables rules
   shell: iptables -L
   register: iptablesrules
-  always_run: yes
+  check_mode: no
   become: true
   changed_when: false
 
