@@ -3,4 +3,4 @@
 - name: install java and tomcat packages (Redhat)
   yum: pkg={{ item }} state=installed
   become: true
-  with_items: tomcat_packages
+  with_items: "{{ tomcat_packages }}"
