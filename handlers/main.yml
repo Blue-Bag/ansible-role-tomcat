@@ -1,2 +1,2 @@
 ---
-- include: tomcat.yml
+- include_tasks: tomcat.yml
